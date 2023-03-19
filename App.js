@@ -1,5 +1,5 @@
 //import { StatusBar } from 'expo-status-bar';
-import React from 'react'; a
+import React from 'react'; ab
 import { NavigationContainer } from '@react-navigation/native';
 import { Button, StyleSheet, Text, View, LogBox } from 'react-native';
 import StackNavigator from './StackNavigator';
