@@ -1,22 +1,26 @@
 //import { StatusBar } from 'expo-status-bar';
-import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-//import tw from "tailwind-rn";
-//import {useTailwind} from 'tailwind-rn';
+import { NavigationContainer } from '@react-navigation/native';
+import { Button, StyleSheet, Text, View, LogBox } from 'react-native';
 import StackNavigator from './StackNavigator';
 import { AuthProvider } from "./hooks/useAuth";
+LogBox.ignoreAllLogs(); //Ignore log notification by message
+//import tw from "tailwind-rn";
+import {useTailwind} from 'tailwind-rn';
 export default function App() {
-  // const tailwind = useTailwind();
+   const tailwind = useTailwind();
+
+
+  
   return (
-    <NavigationContainer>
-      {/* HOC- Higher Order Component */}
-      <AuthProvider>
-        {/* Passes down the cool auth stuff to children */}
-        <StackNavigator />
-      </AuthProvider>
-      
-    </NavigationContainer>
+      <NavigationContainer>
+        {/* HOC- Higher Order Component */}
+        <AuthProvider>
+          {/* Passes down the cool auth stuff to children */}
+          <StackNavigator />
+        </AuthProvider>
+        
+      </NavigationContainer>
     
   );
 }
